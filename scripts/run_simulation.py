@@ -11,8 +11,13 @@ Outputs numeric results to stdout and writes table2_detection_benchmark.csv
 and silence_scores.csv to the working directory.
 """
 
+import os
+import sys
 import numpy as np
 import csv
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src")))
+
 from spectral_silence import (
     RANDOM_SEED, SPECTRAL_MIN, SPECTRAL_MAX, STEP, K_VALUES, AMPLITUDES,
     CANDIDATE_WINDOWS, MASK_INTERVALS,
