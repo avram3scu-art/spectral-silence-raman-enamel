@@ -11,10 +11,10 @@ Outputs numeric results to stdout and writes table2_detection_benchmark.csv
 and silence_scores.csv to the working directory.
 """
 
-import os
-import sys
-import numpy as np
-import csv
+numpy
+scipy
+matplotlib
+scikit-learn
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src")))
 
