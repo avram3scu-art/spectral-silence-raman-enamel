@@ -1,0 +1,11 @@
+injected_amplitude,method,detection_probability,ci_95_halfwidth,false_positive_rate,auc
+0.0,Matched-filter test,0.05,,0.05,0.925
+0.0,Conventional local SNR,0.05,,0.05,0.8
+0.5,Matched-filter test,0.315,0.064,,0.925
+0.5,Conventional local SNR,0.105,0.042,,0.8
+1.0,Matched-filter test,0.685,0.064,,0.925
+1.0,Conventional local SNR,0.24,0.059,,0.8
+1.5,Matched-filter test,0.945,0.032,,0.925
+1.5,Conventional local SNR,0.5,0.069,,0.8
+2.0,Matched-filter test,0.995,0.01,,0.925
+2.0,Conventional local SNR,0.69,0.064,,0.8
