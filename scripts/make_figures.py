@@ -1,8 +1,13 @@
+import os
+import sys
 import numpy as np
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from sklearn.metrics import roc_curve, auc
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src")))
+
 from spectral_silence import *
 
 rng = np.random.default_rng(RANDOM_SEED)
