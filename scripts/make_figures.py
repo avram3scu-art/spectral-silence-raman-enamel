@@ -1,7 +1,7 @@
-import os
-import sys
-import numpy as np
-import matplotlib
+numpy
+scipy
+matplotlib
+scikit-learn
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from sklearn.metrics import roc_curve, auc
