@@ -3,25 +3,44 @@ run_simulation.py
 
 Runs the full simulation-only proof of concept for
 "Spectral Silences in Raman Spectroscopy of Tooth Enamel" (Manuscript ID 2979716)
+
 and prints every numeric result reported in the manuscript's Sections 5-6 and
 Tables 1-2, using the exact fixed parameters in Table 1 (seed = 42).
 
-Run with:  python run_simulation.py
-Outputs numeric results to stdout and writes table2_detection_benchmark.csv
-and silence_scores.csv to the working directory.
+Run from the repository root with:
+
+    python scripts/run_simulation.py
+
+Outputs numeric results to stdout and writes:
+    results/table2_detection_benchmark.csv
+    results/silence_scores.csv
 """
 
-numpy
-scipy
-matplotlib
-scikit-learn
+import os
+import sys
+import csv
+import numpy as np
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "src")))
+# Allow the script to import the reusable analysis module from src/
+sys.path.insert(
+    0,
+    os.path.abspath(
+        os.path.join(os.path.dirname(__file__), "..", "src")
+    )
+)
 
 from spectral_silence import (
-    RANDOM_SEED, SPECTRAL_MIN, SPECTRAL_MAX, STEP, K_VALUES, AMPLITUDES,
-    CANDIDATE_WINDOWS, MASK_INTERVALS,
-    generate_simulated_spectrum, process_spectrum, monte_carlo_benchmark,
+    RANDOM_SEED,
+    SPECTRAL_MIN,
+    SPECTRAL_MAX,
+    STEP,
+    K_VALUES,
+    AMPLITUDES,
+    CANDIDATE_WINDOWS,
+    MASK_INTERVALS,
+    generate_simulated_spectrum,
+    process_spectrum,
+    monte_carlo_benchmark,
 )
 
 def main():
