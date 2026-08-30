@@ -71,6 +71,12 @@ spectral-silence-raman-enamel/
 
 ---
 
+Note on committed outputs
+
+The CSV files in results/ and the PNG files in figures/ are committed to this repository intentionally, not as build artifacts. They are the exact outputs produced by scripts/run_simulation.py and scripts/make_figures.py at the time of manuscript submission, included so a reader can inspect the reported results without first installing dependencies or running any code. Re-running the scripts (see Reproducibility below) regenerates these same files from scratch.
+
+---
+
 Simulation
 
 The synthetic spectrum uses a spectral grid from 200–3200 cm⁻¹ at 1 cm⁻¹ resolution.
